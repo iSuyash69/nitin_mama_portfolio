@@ -20,7 +20,7 @@ const Page = () => {
     const handleTimeout=()=>{
         setTimeout(() => {
             setLoading(false); // Remove the loading screen after the delay
-        }, 1000);
+        }, 2000);
     };
 
         if (document.readyState === "complete"){
