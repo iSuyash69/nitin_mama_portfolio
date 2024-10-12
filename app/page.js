@@ -100,7 +100,7 @@ const Page = () => {
                 </div>
             </div>
             
-            <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col justify-center items-center text-lg z-50 pointer-events-none transition-all duration-300 ease-in-out bg-opacity-85 backdrop-blur-lg opacity-0 ${darkMode ? 'bg-darker text-white' : 'bg-white text-black'} ${isMobileDevice ? "" : ""}`}>
+            <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col justify-center items-center text-lg z-50 pointer-events-none transition-all duration-300 ease-in-out bg-opacity-85 backdrop-blur-lg opacity-0 ${darkMode ? 'bg-darker text-white' : 'bg-white text-black'} ${isMobileDevice ? "opacity-100 pointer-events-auto" : ""}`}>
                 <p>Please open in laptop/desktop</p>
                 <p>Mobile version coming soon!</p>
             </div>
