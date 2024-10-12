@@ -17,10 +17,14 @@
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.1);
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
 .no_scrollbar::-webkit-scrollbar {
   display:none;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .rotate-device {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
