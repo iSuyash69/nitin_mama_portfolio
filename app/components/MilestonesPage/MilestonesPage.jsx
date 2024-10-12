@@ -8,6 +8,20 @@ const MilestonesPage=()=>{
     const [isHover,setIsHover]=useState(false);
     const [hoverYear,setIsHoverYear]=useState('');
 
+    const handleScrollToAbout = () => {
+        const aboutSection = document.getElementById("About");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
+    const handleScrollToVision = () => {
+        const visionSection = document.getElementById("Vision");
+        if (visionSection) {
+            visionSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
     return(
         <div className={`h-full w-full overflow-x-auto flex flex-col relative transition-all select-none ease-in-out items-start px-[5%] ${darkMode ? 'text-white' : 'text-black' }`}>
             <div className="relative w-full pt-8">
@@ -98,6 +112,26 @@ const MilestonesPage=()=>{
                         </ul>
                     </div>
                 </div>
+            </div>
+            {/* <div className="flex gap-3 absolute">
+                <div className={`transition-all ease-in-out rounded-full p-2 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div className={`transition-all ease-in-out rounded-full p-2 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div> */}
+            <div onClick={handleScrollToVision} className="absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0">
+                <span className=" transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
+                <p className="text-xs font-bold">Page | 02</p>                         
+            </div>
+            <div onClick={handleScrollToAbout} className="absolute expand bottom-3 cursor-pointer right-6 flex items-center gap-3 ipad:opacity-0">
+                <p className="text-xs font-bold">Page | 04</p>                         
+                <span className="text-2xl font-bold pb-1">&#10230;</span>
             </div>
         </div>
     );

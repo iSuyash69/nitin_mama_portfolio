@@ -8,6 +8,13 @@ const ContactPage=()=>{
 
     const {darkMode}=useContext(ThemeContext);
 
+    const handleScrollToAbout = () => {
+        const aboutSection = document.getElementById("About");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
     const initialValues={
         name:"",
         emailId:"",
@@ -61,7 +68,7 @@ const ContactPage=()=>{
     
     return(
         <div className={`h-full w-full relative overflow-hidden transition-all select-none  ease-in-out flex flex-col ${darkMode ? 'text-white' : 'text-black' } `}>
-            <div className="relative pl-[18%] w-md:pl-[12%] ipad:pl-[14%] pt-8 h-lg:pt-24 ipad:pt-[4.5%] w-md:pt-[2.5%] ">
+            <div className="relative pl-[18%] w-md:pl-[12%] ipad:pl-[14%] pt-8 h-lg:pt-24 ipad:pt-[6%] w-md:pt-[2.5%] ">
                 <h1 className="text-5xl w-md:text-[42px] font-bold expand">My Contact</h1>
                 <div className={`absolute w-32 w-md:w-[110px] mt-2.5 left-1/5  ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
             </div>
@@ -126,7 +133,12 @@ const ContactPage=()=>{
                 </form>
             </div>
             <Toaster className="mt-[50px]" richColors position="top-right"/>
-            <div className="absolute expand bottom-6 text-xs font-bold right-6">Page | 05</div>
+            <div onClick={handleScrollToAbout} className="absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0">
+                <span className="transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
+                <p className="text-xs font-bold">Page | 04</p>                         
+            </div>
+            <div className="absolute expand bottom-6 text-xs font-bold right-6">End</div>
+
         </div>
     );
 }

@@ -42,9 +42,10 @@ const HomePage=()=>{
                     </div>
                 </div>
             </div>
-            <div className="absolute expand bottom-6 text-xs font-bold right-6">Page | 01</div>
+            <div className="absolute expand bottom-6 text-xs font-bold right-6 ipad:opacity-0">Page | 01</div>
         </div>
     );
 }
 
 export default HomePage;
+

@@ -8,6 +8,20 @@ const MyVisionPage=()=>{
 
     const {darkMode}=useContext(ThemeContext);
 
+     const handleScrollToMilestones = () => {
+        const milestonesSection = document.getElementById("Milestones");
+        if (milestonesSection) {
+            milestonesSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
+    const handleScrollToHome = () => {
+        const HomeSection = document.getElementById("Home");
+        if (HomeSection) {
+            HomeSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+      };
+
     return(
         <div className={`h-full w-full overflow-hidden  relative transition-all select-none ease-in-out flex justify-between ${darkMode ? 'text-white' : 'text-black' } `}>
             <div className="w-[50%] gap-4 flex h-full">
@@ -38,7 +52,15 @@ const MyVisionPage=()=>{
                     </div>
                 </div>
             </div>
-            <div className="absolute expand bottom-6 text-xs font-bold right-6">Page | 02</div>
+            <div onClick={handleScrollToHome} className="absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0">
+                <span className=" transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
+                <p className="text-xs font-bold">Page | 01</p>                         
+            </div>
+
+            <div onClick={handleScrollToMilestones} className="absolute expand bottom-3 cursor-pointer right-6 flex items-center gap-3 ipad:opacity-0">
+                <p className="text-xs font-bold">Page | 03</p>                         
+                <span className="text-2xl font-bold pb-1">&#10230;</span>
+            </div>
         </div>
     );
 }

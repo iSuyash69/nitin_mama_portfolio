@@ -11,6 +11,8 @@ import ContactPage from "@/app/components/ContactPage/ContactPage";
 import MilestonesPage from "./components/MilestonesPage/MilestonesPage";
 import rotateTabletImg from "../app/assets/images/rotateTabletImg.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { slideInFromLeft} from "./utils/motion";
 
 const Page = () => {
 
@@ -75,9 +77,9 @@ const Page = () => {
         <div className={`flex flex-col transition-all ease-in-out ${darkMode ? 'bg-darker' : 'bg-white'}`}>
             <NavBar/>
             <div style={{height: "calc(100vh - 65.6px)"}} className="overflow-x-auto no_scrollbar flex scroll-smooth snap-x snap-mandatory">
-                <section id="Home" className="min-w-full flex items-center justify-center" style={{ scrollSnapAlign: "center" }}>
+                <motion.section variants={slideInFromLeft(0.1)} initial="hidden" animate="visible"  id="Home" className="min-w-full flex items-center justify-center" style={{ scrollSnapAlign: "center" }}>
                     <HomePage/>
-                </section>
+                </motion.section>
                 <section  id="Vision" className="min-w-full flex items-center justify-center" style={{ scrollSnapAlign: "center" }}>
                     <MyVisionPage/>
                 </section>

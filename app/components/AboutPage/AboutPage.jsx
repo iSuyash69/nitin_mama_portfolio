@@ -7,6 +7,20 @@ const AboutPage=()=>{
 
     const {darkMode}=useContext(ThemeContext);
 
+    const handleScrollToConnect = () => {
+        const connectSection = document.getElementById("Connect");
+        if (connectSection) {
+            connectSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
+    const handleScrollToMilestones = () => {
+        const milestonesSection = document.getElementById("Milestones");
+        if (milestonesSection) {
+            milestonesSection.scrollIntoView({ behavior: "smooth", inline: "start" });
+        }
+    };
+
     return(
         <div className={`h-full w-full relative overflow-hidden transition-all select-none ease-in-out flex flex-col  ${darkMode ? 'text-white' : 'text-black' } `}>
             <div className="relative text-center pr-0 w-full pt-8 w-md:pt-5 ipad:pt-6">
@@ -26,7 +40,14 @@ const AboutPage=()=>{
                     <p className="expand">Outside of my professional life, I am a vintage motorcycle enthusiast and nature lover with a passion for cultural enrichment. Gardening, music, poetry, and literature inspire me, and I integrate this creativity into both my personal and professional pursuits. I believe in living authentically, with a relentless commitment to growth and continuous learning, driven by a desire to inspire and lead others to greatness.</p>
                 </div>
             </div>
-            <div className="absolute expand bottom-6 text-xs font-bold right-6">Page | 04</div>
+            <div onClick={handleScrollToMilestones} className="absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0">
+                <span className=" transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
+                <p className="text-xs font-bold">Page | 03</p>                         
+            </div>
+            <div onClick={handleScrollToConnect} className="absolute expand bottom-3 cursor-pointer right-6 flex items-center gap-3 ipad:opacity-0">
+                <p className="text-xs font-bold">Page | 05</p>                         
+                <span className="text-2xl font-bold pb-1">&#10230;</span>
+            </div>
         </div>
 
     )
