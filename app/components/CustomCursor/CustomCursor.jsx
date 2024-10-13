@@ -182,10 +182,12 @@ const CustomCursor = () => {
     if (isLargeExpanded) {
       cursorWidth.set(largeExpandedSize);
       cursorHeight.set(largeExpandedSize);
-    } else if (isExpanded) {
+    } 
+    else if (isExpanded) {
       cursorWidth.set(expandedSize);
       cursorHeight.set(expandedSize);
-    } else {
+    } 
+    else {
       cursorWidth.set(cursorSize);
       cursorHeight.set(cursorSize);
     }

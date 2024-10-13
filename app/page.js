@@ -26,7 +26,7 @@ const Page = () => {
     const handleTimeout=()=>{
         setTimeout(() => {
             setLoading(false); // Remove the loading screen after the delay
-        }, 2000);
+        }, 2500);
     };
 
         if (document.readyState === "complete"){
@@ -112,3 +112,4 @@ const Page = () => {
 };
 
 export default Page;
+
