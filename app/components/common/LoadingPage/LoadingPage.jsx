@@ -23,8 +23,10 @@ const LoadingPage=()=>{
     const mosaicSize = screenWidth < 768 ? "small" : "large";
 
     return(
-        <div className={`flex justify-center items-center h-screen ${darkMode ? 'bg-darker' : 'bg-white'}`}>
-            <Mosaic color={mosaicColor} speedPlus="0"  size={mosaicSize}/>
+        <div className={`flex justify-center overflow-hidden items-center h-screen ${darkMode ? 'bg-darker' : 'bg-white'}`}>
+            <div className="pb-20">
+                <Mosaic color={mosaicColor} speedPlus="0"  size={mosaicSize}/>
+            </div>
         </div>
     );
 }

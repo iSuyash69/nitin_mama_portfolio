@@ -1,7 +1,8 @@
-import { Open_Sans, Inter } from '@next/font/google'
+import { Open_Sans, Inter } from 'next/font/google'
 import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 import ThemeContextProvider from '@/app/context/themeContext';
+import MobileDeviceContextProvider from '@/app/context/mobileDeviceContext';
 
 const openSans = Open_Sans({ weight: ['400', '600'], subsets: ['latin'] })
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${openSans.className} ${inter.className}`}>
         <ThemeContextProvider>
-          {children}
+          <MobileDeviceContextProvider>
+            {children}
+          </MobileDeviceContextProvider>
         </ThemeContextProvider>
       </body>
     </html>

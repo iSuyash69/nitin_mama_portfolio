@@ -1,7 +1,7 @@
 import { ThemeContext } from "@/app/context/themeContext";
 import Image from "next/image";
 import { useContext } from "react";
-import aboutPageImg from "../../assets/images/aboutPageImg.jpg"
+import aboutPageImg from "../../../assets/images/aboutPageImg.jpg";
 
 const AboutPage=()=>{
 

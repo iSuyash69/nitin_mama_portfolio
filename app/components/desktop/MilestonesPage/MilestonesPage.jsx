@@ -7,7 +7,6 @@ const MilestonesPage=()=>{
 
     const [isHover,setIsHover]=useState(false);
     const [hoverYear,setIsHoverYear]=useState('');
-    const [isSectionMilestones,setIsSectionMilestones]=useState(true);
 
     const handleScrollToAbout = () => {
         const aboutSection = document.getElementById("About");
@@ -48,12 +47,12 @@ const MilestonesPage=()=>{
         <div className={`milestones h-full w-full overflow-x-auto flex flex-col relative transition-all select-none ease-in-out items-start px-[5%] ${darkMode ? 'text-white' : 'text-black' }`}>
             <div className="relative w-full pt-8">
                 <h1 className="text-5xl w-md:text-[42px] w-fit font-bold expand">Milestones</h1>
-                <div className={`absolute w-40 w-md:w-[138px] mt-2.5 left-0 ${darkMode ? 'bg-white':'bg-black'} h-[2.5px]`}></div>
+                <div className={`absolute w-40 w-md:w-[138px] mt-2.5 left-0 transition-all ease-in-out ${darkMode ? 'bg-white':'bg-black'} h-[2.5px]`}></div>
             </div>
             <div className="min-w-[1375px] pb-36 w-md:pb-28 h-full overflow-y-hidden overflow-x-auto relative gap-8 flex items-center">
-                <div className={`w-[1200px] flex items-center justify-end h-0.5 absolute left-20 mt-12 w-md:mt-11 ${darkMode ? 'bg-white' : 'bg-black'}`}>
+                <div className={`w-[1200px] transition-all ease-in-out flex items-center justify-end h-0.5 absolute left-20 mt-12 w-md:mt-11 ${darkMode ? 'bg-white' : 'bg-black'}`}>
                     <svg className="" width="12" height="12" viewBox="0 0 10 10" fill="none">
-                    <polygon points="0,0,10,5 0,10" fill="currentColor" />
+                        <polygon points="0,0,10,5 0,10" fill="currentColor" />
                     </svg>
                 </div>
                 <div className="flex flex-col gap-4 items-center w-44">
@@ -147,11 +146,11 @@ const MilestonesPage=()=>{
                     </svg>
                 </div>
             </div> */}
-            <div onClick={handleScrollToVision} className={`absolute transition-all ease-in-out ${isSectionMilestones ? 'opacity-100 pointer-events-auto' : 'opacity-0'} expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0 pointer-events-none`}>
+            <div onClick={handleScrollToVision} className={`absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0 `}>
                 <span className=" transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
                 <p className="text-xs font-bold">Page | 02</p>                         
             </div>
-            <div onClick={handleScrollToAbout} className={`absolute transition-all ease-in-out ${isSectionMilestones ? 'opacity-100 pointer-events-auto' : 'opacity-0'} expand bottom-3 cursor-pointer right-6 flex items-center gap-3 ipad:opacity-0 pointer-events-none`}>
+            <div onClick={handleScrollToAbout} className={`absolute expand bottom-3 cursor-pointer right-6 flex items-center gap-3 ipad:opacity-0 `}>
                 <p className="text-xs font-bold">Page | 04</p>                         
                 <span className="text-2xl font-bold pb-1">&#10230;</span>
             </div>

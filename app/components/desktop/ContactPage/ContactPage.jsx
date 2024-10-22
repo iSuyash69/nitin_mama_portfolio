@@ -74,7 +74,7 @@ const ContactPage=()=>{
             </div>
             <div className="w-full gap-[12%] w-md:gap-[9%] ipad:gap-[10%] px-[18%] w-md:px-[12%] ipad:px-[14%] flex justify-center mt-6 w-md:mt-4 h-full">
                 <div className="pt-10 w-md:pt-6">
-                    <p className="expand text-[17px] w-md:text-base">With over a decade of experience in Sales and Marketing, I focus on developing impactful strategies that foster growth. I’m eager to connect with like-minded professionals who share a commitment to excellence and creativity. Let’s collaborate and explore opportunities together. Feel free to reach out—I’m always open to new ideas and partnership </p>
+                    <p className="expand text-[17px] w-md:text-base">With over two decades of experience in Sales and Marketing, I focus on developing impactful strategies that foster growth. I’m eager to connect with like-minded professionals who share a commitment to excellence and creativity. Let’s collaborate and explore opportunities together. Feel free to reach out—I’m always open to new ideas and partnership </p>
                     <div className="flex flex-col gap-5 w-md:gap-4 pt-8 w-md:pt-6">
                         <div className="flex gap-3">
                             <span className={`flex items-center rounded-full w-fit p-[6px] text-sm transition-all ease-in-out ${darkMode ? 'bg-white' : 'bg-black '} `}>

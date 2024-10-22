@@ -1,6 +1,6 @@
 import Image from "next/image";
-import visonPageImg1 from "../../assets/images/visionPageImg1.jpg"
-import visonPageImg2 from "../../assets/images/visionPageImg2.jpg"
+import visonPageImg1 from "../../../assets/images/visionPageImg1.jpg"
+import visonPageImg2 from "../../../assets/images/visionPageImg2.jpg"
 import { useContext } from "react";
 import { ThemeContext } from "@/app/context/themeContext";
 

@@ -19,6 +19,7 @@ module.exports = {
         'h-lg':{'raw':'(min-height:800px)'},
         'w-md': {'raw': '(min-width: 1000px) and (max-width: 1300px) and (max-height: 749px)'},
         'ipad': {'raw': '(min-height: 750px) and (min-width: 1000px) and (max-width: 1300px)'},
+        's-mb': {'raw': '(max-width: 380px)'},
       },
     },
   },
