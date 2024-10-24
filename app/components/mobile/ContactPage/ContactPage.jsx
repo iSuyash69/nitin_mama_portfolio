@@ -124,7 +124,7 @@ const ContactPage=()=>{
                     </div>
                 </form>              
                 <p className="mt-12 mb-3 text-center text-sm text-[#535A68] w-full">© 2024 Nitin Deshpande. All rights reserved.</p> 
-                <Toaster className="mt-[45px]" richColors />
+                <Toaster className="mt-[45px]" richColors position="top-center"/>
             </div>
         </div>
     );
