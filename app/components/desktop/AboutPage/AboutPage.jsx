@@ -25,7 +25,7 @@ const AboutPage=()=>{
         <div className={`h-full w-full relative overflow-hidden transition-all select-none ease-in-out flex flex-col  ${darkMode ? 'text-white' : 'text-black' } `}>
             <div className="relative text-center pr-0 w-full pt-8 w-md:pt-5 ipad:pt-6">
                 <h1 className="text-5xl w-md:text-[42px] font-bold expand">About Me</h1>
-                <div className={`absolute w-28 w-md:w-[100px] mt-2.5 right-1/2  ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
+                <div className={`absolute w-28 w-md:w-[100px] mt-2.5 right-1/2 transition-all ease-in-out ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
             </div>
             <div className="w-full h-full overflow-auto flex mt-12 h-lg:mt-14 w-md:mt-12 items-start">
                 <div className="w-[35%] h-lg:w-[40%] w-md:w-[35%] ipad:w-[40%] flex pl-10 w-md:pl-0 ipad:pl-0 justify-center pt-16 h-lg:pt-[6%] ipad:pt-[8%]">

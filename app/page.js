@@ -11,6 +11,7 @@ import AboutPageMobile from "@/app/components/mobile/AboutPage/AboutPage";
 import { ThemeContext } from "@/app/context/themeContext";
 import LoadingPage from "@/app/components/common/LoadingPage/LoadingPage";
 import ContactPage from "@/app/components/desktop/ContactPage/ContactPage";
+import ContactPageMobile from "./components/mobile/ContactPage/ContactPage";
 import MilestonesPage from "./components/desktop/MilestonesPage/MilestonesPage";
 import MilestonesPageMobile from "./components/mobile/MilestonesPage/MilestonesPage";
 import rotateTabletImg from "../app/assets/images/rotateTabletImg.png";
@@ -114,10 +115,13 @@ const Page = () => {
             {isMobileDevice &&
                 <div className={`w-full min-h-screen flex flex-col transition-all ease-in-out ${darkMode ? 'bg-darker' : 'bg-white'}`}>
                     <NavBar/>
-                    <motion.div variants={slideInFromBottom} initial="hidden" animate="visible" ><HomePageMobile/></motion.div>
-                    <MyVisionPageMobile/>
+                    <motion.div variants={slideInFromBottom} initial="hidden" animate="visible">                        
+                        <HomePageMobile/>
+                        <MyVisionPageMobile/>
+                    </motion.div>
                     <MilestonesPageMobile/>
                     <AboutPageMobile/>
+                    <ContactPageMobile/>
                 </div>
             }
         </div>

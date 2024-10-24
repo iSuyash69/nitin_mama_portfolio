@@ -225,6 +225,25 @@ const NavBar = () => {
         };
     }, []);
 
+    //Mobile related functions : 
+    
+    const scrollToSection = (sectionId, offset = 70) => {
+      const targetSection = document.getElementById(sectionId);
+      const offsetPosition = targetSection?.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({
+          top: offsetPosition || 0,
+          behavior: 'smooth'
+      });
+    };
+    
+    const sectionMapping = {
+      "Home": "homeSection",
+      "My Vision": "myVisionSection",
+      "Milestones": "milestonesSection",
+      "About Me": "aboutSection",
+      "Connect": "contactSection"
+    };
+
     const menuVariants = {
         open: {
             y:0,
@@ -300,7 +319,7 @@ const NavBar = () => {
 
       {isMobileDevice &&
         <div className={`w-full text-white border-b-[2px] border-b-black bg-dark py-4 fixed top-0 px-5 z-50 flex justify-between`}>
-          <div onClick={handleScrollToHome} className={`font-semibold text-base cursor-pointer expand  ${darkMode ? '' : ''}`}>Nitin Deshpande</div>
+          <div onClick={()=>{scrollToSection('homeSection')}} className={`font-semibold text-base cursor-pointer expand  ${darkMode ? '' : ''}`}>Nitin Deshpande</div>
           <div className="flex gap-7 items-center">
             <div onClick={handleTheme}>
               <svg className={`sun-and-moon transition-all duration-500 ease-in-out`} aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
@@ -345,7 +364,7 @@ const NavBar = () => {
                     initial="closed"
                     animate="open"
                   >
-                    <a onClick={(e) => {handleScrollToSection(e, item); setIsMenuPopup(false);}}>
+                    <a onClick={(e) => {scrollToSection(sectionMapping[item]); setIsMenuPopup(false);}}>
                       {item}
                     </a>
                   </motion.li>

@@ -1,7 +1,7 @@
 import { ThemeContext } from "@/app/context/themeContext";
 import { useContext } from "react";
-import visonPageImg1 from "../../../assets/images/visionPageImg1.jpg"
-import visonPageImg2 from "../../../assets/images/visionPageImg2.jpg"
+import visonPageImg1 from "../../../assets/images/visionPageImg1.png"
+import visonPageImg2 from "../../../assets/images/visionPageImg2.png"
 import Image from "next/image";
 
 const MyVisionPage=()=>{
@@ -9,7 +9,7 @@ const MyVisionPage=()=>{
     const {darkMode}=useContext(ThemeContext);
 
     return(
-        <div className={`w-full h-full relative flex flex-col mt-12 transition-all ease-in-out ${darkMode ? 'text-white' : 'text-black' }`}>
+        <div id="myVisionSection" className={`w-full h-full relative flex flex-col mt-12 transition-all ease-in-out ${darkMode ? 'text-white' : 'text-black' }`}>
             <div className="px-5 flex justify-end">
                 <div className="w-[60%] h-[55vh] left-5 absolute overflow-hidden  bg-red-200">
                     <Image className="w-full h-full object-cover object-right" src={visonPageImg1} alt="img"/>

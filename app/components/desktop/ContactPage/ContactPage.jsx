@@ -64,13 +64,13 @@ const ContactPage=()=>{
     const {values,handleBlur,handleChange,handleSubmit,handleReset}=useFormik({
         initialValues:initialValues,
         onSubmit:()=>{handleConnect(values)}
-    })
+    });
     
     return(
         <div className={`h-full w-full relative overflow-hidden transition-all select-none  ease-in-out flex flex-col ${darkMode ? 'text-white' : 'text-black' } `}>
             <div className="relative pl-[18%] w-md:pl-[12%] ipad:pl-[14%] pt-8 h-lg:pt-24 ipad:pt-[6%] w-md:pt-[2.5%] ">
                 <h1 className="text-5xl w-md:text-[42px] font-bold expand">My Contact</h1>
-                <div className={`absolute w-32 w-md:w-[110px] mt-2.5 left-1/5  ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
+                <div className={`absolute w-32 w-md:w-[110px] mt-2.5 left-1/5 transition-all ease-in-out ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
             </div>
             <div className="w-full gap-[12%] w-md:gap-[9%] ipad:gap-[10%] px-[18%] w-md:px-[12%] ipad:px-[14%] flex justify-center mt-6 w-md:mt-4 h-full">
                 <div className="pt-10 w-md:pt-6">
@@ -93,7 +93,7 @@ const ContactPage=()=>{
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.396c0-1.288-.026-2.946-1.796-2.946-1.798 0-2.072 1.403-2.072 2.85v5.492h-3v-10h2.881v1.367h.041c.401-.762 1.379-1.563 2.839-1.563 3.037 0 3.6 2.002 3.6 4.605v5.591z"/>
                                 </svg>
                             </span>
-                            <a href="https://www.linkedin.com/in/yating-lin-2055b6221/">www.linkedin.com/in/yating-lin-2055b6221</a>
+                            <a href="https://www.linkedin.com/in/nitin-kumar-deshpande-/">www.linkedin.com/in/yating-lin-2055b6221</a>
                         </div>
                         <div className="flex gap-3 items-center">
                             <span className={`flex  items-center h-fit rounded-full w-fit p-[6px] text-sm transition-all ease-in-out ${darkMode ? 'bg-white' : 'bg-black '} `}>
@@ -123,7 +123,7 @@ const ContactPage=()=>{
                                 <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                             </svg>
                         </div>
-                        <input type="email" required name="emailId" value={values.emailId} onChange={handleChange} onBlur={handleBlur} id="email" className={`ps-12 transition-all ease-in-out rounded-md border block h-12 text-[15px] w-full p-2.5 ${darkMode ? ' bg-dark border-gray-700 placeholder-gray-300 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' : 'border-gray-300 bg-gray-100 border text-gray-900 focus:ring-blue-500 focus:border-blue-500'}`} placeholder="got@gmail.com"></input>
+                        <input type="email" required name="emailId" value={values.emailId} onChange={handleChange} onBlur={handleBlur} id="email" className={`ps-12 transition-all ease-in-out rounded-md border block h-12 text-[15px] w-full p-2.5 ${darkMode ? ' bg-dark border-gray-700 placeholder-gray-300 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' : 'border-gray-300 bg-gray-100 border text-gray-900 focus:ring-blue-500 focus:border-blue-500'}`} placeholder="user@gmail.com"></input>
                     </div>
                     <label className={`block mb-2 text-sm  transition-all ease-in-out font-medium ${darkMode ? ' text-white' : 'text-gray-900'} `}>Your Message</label>
                     <textarea id="message" required name="message" value={values.message} onChange={handleChange} onBlur={handleBlur} className={`w-[350px] border h-36 transition-all ease-in-out text-sm rounded-md p-2.5 ${darkMode ? ' bg-dark border-gray-700 dark:placeholder-gray-300 text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' : 'border-gray-300 bg-gray-100 border text-gray-900 focus:ring-blue-500 focus:border-blue-500'}`} placeholder="Type your message here..."></textarea>
@@ -132,7 +132,7 @@ const ContactPage=()=>{
                     </div>
                 </form>
             </div>
-            <Toaster className="mt-[50px]" richColors position="top-right"/>
+            <Toaster className="mt-[50px] mb-[15px]" richColors position="top-right"/>
             <div onClick={handleScrollToAbout} className="absolute expand bottom-3 cursor-pointer left-6 flex items-center gap-3 ipad:opacity-0">
                 <span className="transform rotate-180 text-2xl font-bold pb-1">&#10230;</span>
                 <p className="text-xs font-bold">Page | 04</p>                         

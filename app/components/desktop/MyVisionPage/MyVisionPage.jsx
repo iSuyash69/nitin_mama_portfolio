@@ -1,6 +1,6 @@
 import Image from "next/image";
-import visonPageImg1 from "../../../assets/images/visionPageImg1.jpg"
-import visonPageImg2 from "../../../assets/images/visionPageImg2.jpg"
+import visonPageImg1 from "../../../assets/images/visionPageImg1.png"
+import visonPageImg2 from "../../../assets/images/visionPageImg2.png"
 import { useContext } from "react";
 import { ThemeContext } from "@/app/context/themeContext";
 
@@ -35,7 +35,7 @@ const MyVisionPage=()=>{
             <div className="w-[45%] h-full justify-center pb-20 w-md:pb-0 gap-16 w-md:gap-12 flex flex-col">
                 <div className="relative pl-14 w-md:pl-8">
                     <h1 className="text-5xl w-md:text-[42px] font-bold expand">My Vision</h1>
-                    <div className={`absolute w-28 w-md:w-24 mt-2.5 left-14 w-md:left-8 ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
+                    <div className={`absolute w-28 w-md:w-24 mt-2.5 left-14 w-md:left-8 transition-all ease-in-out ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
                 </div>
                 <div className="flex flex-col pl-10 w-md:pl-0 gap-10 w-md:gap-6 mr-[28%] w-md:mr-[20%] ipad:mr-[20%]">
                     <div className="flex items-center gap-4">

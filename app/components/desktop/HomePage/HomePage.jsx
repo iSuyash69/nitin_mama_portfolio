@@ -29,7 +29,7 @@ const HomePage=()=>{
             <div className="flex flex-col gap-7 h-lg:gap-8 w-md:gap-6 ipad:gap-8 justify-center pb-16 h-lg:pb-24 pl-[5.5%] w-md:pl-[5.5%] w-[55%]">
                 <div className="flex relative w-md:pr-24 ipad:pr-24">
                     <h1 className="text-8xl h-lg:text-[101px] w-md:text-7xl ipad:text-7xl h-lg:leading-[1.1] font-bold"><span className="largeExpand">Nitin<br></br>Deshpande</span></h1>
-                    <div className={`absolute top-1/3 w-[65%] h-lg:w-[63%] ipad:w-[66%] w-md:w-[64%] right-0 ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
+                    <div className={`absolute top-1/3 w-[65%] h-lg:w-[63%] ipad:w-[66%] w-md:w-[64%] right-0 transition-all ease-in-out ${darkMode?'bg-white':'bg-black'} h-[2.5px]`}></div>
                 </div>
                 <div className="pr-[105px] text-lg h-lg:text-lg w-md:text-base ipad:text-[17px]">
                     <p className="expand">I am a visionary leader in Marketing and Strategic Business, committed to driving results and inspiring transformation. My focus is on crafting strategies that empower teams, foster growth, and deliver impactful outcomes.</p>
