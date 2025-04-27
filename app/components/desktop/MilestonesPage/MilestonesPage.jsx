@@ -108,7 +108,7 @@ const MilestonesPage=()=>{
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 pt-[1px] items-center w-44">
-                    <p onMouseEnter={()=>{setIsHover(true);setIsHoverYear(2011)}} onMouseLeave={()=>{setIsHover(false);setIsHoverYear('')}}  className="text-[17px]  w-md:text-base cursor-pointer expand"><span className="font-bold">Product Manager (Marketing)</span> - Siemens Ltd.</p>
+                    <p onMouseEnter={()=>{setIsHover(true);setIsHoverYear(2011)}} onMouseLeave={()=>{setIsHover(false);setIsHoverYear('')}}  className="text-[17px]  w-md:text-base cursor-pointer expand"><span className="font-bold">Product Manager (Sales)</span> - Siemens Ltd.</p>
                     <div className={`w-6 w-md:w-5 h-6 w-md:h-5  ${darkMode ? 'bg-white' : 'bg-black'} transition-all ease-in-out rounded-full`}></div>
                     <p className="text-lg w-md:text-[17px] font-bold">2011</p>
                     <div className={`absolute mt-[85px] left-[400px] font-[300] border bg-opacity-90 backdrop-blur-sm w-[450px] max-h-72 rounded-xl transition-all duration-500 pt-2.5 pb-5 text-[15px] w-md:text-[14px] px-4 ease-in-out ${isHover && hoverYear==2011 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'} ${darkMode ? 'bg-[#3a3a3a] border-gray-700' : 'bg-gray-200 border-gray-300'}`}>

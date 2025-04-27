@@ -55,7 +55,7 @@ const MilestonesPage=()=>{
                     <p onClick={()=>{setIsMilestonePopUp(true);setIsSelectedMilestone(4)}} className="w-[45%] pl-7 pr-8"><span className="font-bold">Product Manager (Marketing)</span> - Siemens Ltd.</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <p onClick={()=>{setIsMilestonePopUp(true);setIsSelectedMilestone(5)}} className="w-[45%] pl-12  pr-6"><span className="font-bold">Product Manager (Marketing)</span> - Siemens Ltd.</p>
+                    <p onClick={()=>{setIsMilestonePopUp(true);setIsSelectedMilestone(5)}} className="w-[45%] pl-12  pr-6"><span className="font-bold">Product Manager (Sales)</span> - Siemens Ltd.</p>
                     <div className={`w-6 w-md:w-5 h-6 w-md:h-5  ${darkMode ? 'bg-white' : 'bg-black'} transition-all ease-in-out rounded-full`}></div>
                     <div className="w-[45%] pl-[8%] font-bold">2011</div>
                 </div>

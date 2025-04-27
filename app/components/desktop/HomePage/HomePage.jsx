@@ -1,7 +1,7 @@
 import { ThemeContext } from "@/app/context/themeContext";
 import Image from "next/image";
 import { useContext } from "react";
-import homePageImg from "../../../assets/images/homePageImg.jpg";
+import homePageImg from "../../../assets/images/homePageImg.png";
 
 const HomePage=()=>{
 
@@ -24,7 +24,7 @@ const HomePage=()=>{
     return(
         <div className={`h-full w-full overflow-hidden relative transition-all select-none ease-in-out flex justify-between ${darkMode ? 'text-white' : 'text-black' } `}>
             <div className="w-[45%] w-md:w-[45%]">
-                <Image className="w-full h-full object-cover object-[center_50%] h-lg:object-[center_52%] ipad:object-[center_60%] w-md:object-[center_60%] " alt="img" src={homePageImg}></Image>
+                <Image className="w-full h-full object-cover object-[center_52%] h-lg:object-[center_60%] ipad:object-[center_70%] w-md:object-[center_60%] " alt="img" src={homePageImg}></Image>
             </div>
             <div className="flex flex-col gap-7 h-lg:gap-8 w-md:gap-6 ipad:gap-8 justify-center pb-16 h-lg:pb-24 pl-[5.5%] w-md:pl-[5.5%] w-[55%]">
                 <div className="flex relative w-md:pr-24 ipad:pr-24">

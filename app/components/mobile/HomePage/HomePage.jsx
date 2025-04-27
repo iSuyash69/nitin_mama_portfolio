@@ -1,5 +1,5 @@
 import Image from "next/image";
-import homePageImg from "../../../assets/images/homePageImg.jpg";
+import homePageImg from "../../../assets/images/homePageImg.png";
 import arrowshomePageImg from "../../../assets/images/arrowsHomePageMobile.png";
 import { useContext } from "react";
 import { ThemeContext } from "@/app/context/themeContext";
@@ -25,7 +25,7 @@ const HomePage=()=>{
                     <Image className="w-full h-full object-cover blur-sm" src={homePageImg} alt="img"></Image>
                 </div>
                 <div className="w-[75%] ml-4 mt-4 overflow-hidden h-[35vh] s-mb:h-[40vh] rounded-md transition-all ease-in-out" style={{boxShadow: !darkMode ? '5px 5px 15px rgba(107, 114, 128, 0.9)' : '5px 5px 15px rgba(0, 0, 0, 0.2)'}}>
-                    <Image className="w-full h-full object-cover object-[center_40%] scale-125" src={homePageImg} alt="img"></Image>
+                    <Image className="w-full h-full object-cover object-[center_50%] translate-x-[5%] scale-125" src={homePageImg} alt="img"></Image>
                 </div>
             </div> 
             <div className="relative pl-5 mt-8 gap-2 flex flex-col">
